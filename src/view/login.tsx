@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet, Text, ImageBackground } from 'react-native';
+import { View, StyleSheet, ImageBackground } from 'react-native';
 import {Input, Button} from 'react-native-elements';
 
 export interface AppProps{
@@ -21,10 +21,10 @@ export default class LoginScreen extends React.Component<AppProps, AppState> {
   }
 
   public login(){
-    if(this.state.user == 'admin' && this.state.password == '123')
-      console.log('Login realizado com sucesso');
+    if(this.state.user == 'Admin' && this.state.password == '123')
+      this.props.navigation.navigate('home', {email: this.state.email});
     else 
-      console.log ('E-mail e/ou senha(s) incorreto(s)');
+      console.log ('Email ou senha incorreta!');
   }
 
   public render(){
@@ -36,7 +36,7 @@ export default class LoginScreen extends React.Component<AppProps, AppState> {
                 <Button title="Esqueci minha senha" type="clear" onPress={() => this.login()} buttonStyle={styles.forgotUserOrPassword}/>
                 <Button title="Não possui conta? Cadastre-se" type="clear" onPress={() => this.login()} buttonStyle={styles.forgotUserOrPassword}/>
               </View>
-            </ImageBackground>)  
+            </ImageBackground>)
   }
 }
 
@@ -81,6 +81,3 @@ const styles = StyleSheet.create({
     marginTop: 70
   }
 });
-
-
-
