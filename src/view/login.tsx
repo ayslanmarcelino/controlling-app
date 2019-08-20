@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet, Text, ImageBackground } from 'react-native';
+import { View, StyleSheet, ImageBackground } from 'react-native';
 import {Input, Button} from 'react-native-elements';
 
 export interface AppProps{
@@ -21,22 +21,24 @@ export default class LoginScreen extends React.Component<AppProps, AppState> {
   }
 
   public login(){
-    if(this.state.user == 'admin' && this.state.password == '123')
-      console.log('Login realizado com sucesso');
+    if(this.state.user == '1' && this.state.password == '')
+      this.props.navigation.navigate('home', {email: this.state.email});
     else 
-      console.log ('E-mail e/ou senha(s) incorreto(s)');
+      console.log ('Email e/ou senha incorreto(s)');
   }
 
   public render(){
-    return (<ImageBackground source={require('./../../assets/img/background.png')} style={styles.background}>
-              <View style={styles.container}>
-                <Input placeholder=' Digite seu usuário' leftIcon={{name:'person', color:'gray'}} inputContainerStyle={styles.containerInput} onChangeText={user => this.setState({user})}/>
-                <Input placeholder=' Digite sua senha' leftIcon={{name:'lock', color:'gray'}} inputContainerStyle={styles.containerInput} onChangeText={password => this.setState({password})} secureTextEntry={true}/>
-                <Button title="Entrar" onPress={() => this.login()} buttonStyle={styles.buttonEnter}/>
-                <Button title="Esqueci minha senha" type="clear" onPress={() => this.login()} buttonStyle={styles.forgotUserOrPassword}/>
-                <Button title="Não possui conta? Cadastre-se" type="clear" onPress={() => this.login()} buttonStyle={styles.forgotUserOrPassword}/>
-              </View>
-            </ImageBackground>)  
+    return (
+    <ImageBackground source={require('./../../assets/img/background.png')} style={styles.background}>
+      <View style={styles.container}>
+        <Input placeholder=' Digite seu usuário' leftIcon={{name:'person', color:'gray'}} inputContainerStyle={styles.containerInput} onChangeText={user => this.setState({user})}/>
+        <Input placeholder=' Digite sua senha' leftIcon={{name:'lock', color:'gray'}} inputContainerStyle={styles.containerInput} onChangeText={password => this.setState({password})} secureTextEntry={true}/>
+        <Button title="Entrar" onPress={() => this.login()} buttonStyle={styles.buttonEnter}/>
+        <Button title="Esqueci minha senha" type="clear" onPress={() => this.login()} buttonStyle={styles.forgotUserOrPassword}/>
+        <Button title="Não possui conta? Cadastre-se" type="clear" onPress={() => this.login()} buttonStyle={styles.forgotUserOrPassword}/>
+      </View>
+    </ImageBackground>
+    )
   }
 }
 
@@ -81,6 +83,3 @@ const styles = StyleSheet.create({
     marginTop: 70
   }
 });
-
-
-

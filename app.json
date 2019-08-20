@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "aula",
-    "slug": "aula",
+    "name": "Controlling",
+    "slug": "controlling-app",
     "privacy": "public",
     "sdkVersion": "33.0.0",
     "platforms": [
@@ -25,6 +25,10 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "br.com.ayslan",
+      "versionCode": 1
     }
   }
 }
