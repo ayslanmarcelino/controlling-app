@@ -1,22 +1,19 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Text, View } from 'react-native'
-import { Button } from 'react-native-elements';
-
-const useStyles = makeStyles({
-  root: {
-    width: 500,
-  },
-});
+import { Text, View, StyleSheet } from 'react-native'
 
 export default function SimpleBottomNavigation() {
-  const classes = useStyles();
-  const [value, setValue] = React.useState(0);
 
   return (
-    <View>
-
+    <View style={styles.view}>
+      <Text>Bem-vindo(a) ao Controlling!</Text>
     </View>
-
   );
 }
+
+const styles = StyleSheet.create({
+  view: {
+    flex: 1, 
+    justifyContent: 'center', 
+    alignItems: 'center'
+  }
+});

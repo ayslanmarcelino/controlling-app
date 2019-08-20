@@ -1,9 +1,9 @@
 import HomeScreen from '../view/home';
 import { Icon } from 'react-native-elements';
 import React from 'react'
-import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
+import { createBottomTabNavigator } from "react-navigation";
 
-export const homeNavigator = createMaterialBottomTabNavigator({
+export const homeNavigator = createBottomTabNavigator({
   Home: {screen: HomeScreen, navigationOptions: {tabBarIcon: <Icon name="home"></Icon>}}, 
   undefined: {screen: HomeScreen, navigationOptions: {tabBarIcon: <Icon name="any"></Icon>}},
   Adicionar: {screen: HomeScreen, navigationOptions: {tabBarIcon: <Icon name="add"></Icon>}},
