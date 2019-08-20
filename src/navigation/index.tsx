@@ -1,10 +1,10 @@
-import { createAppContainer, createSwitchNavigator } from 'react-navigation';
+import { createAppContainer, createSwitchNavigator, createBottomTabNavigator } from 'react-navigation';
 import LoginScreen from '../view/login';
-import HomeScreen from '../view/home';
+import { homeNavigator } from './home';
 
 const navigation = createSwitchNavigator({
   login: LoginScreen,
-  home: HomeScreen
+  home: homeNavigator
 }, {
   initialRouteName: 'login'
 })

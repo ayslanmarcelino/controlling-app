@@ -1,35 +1,22 @@
-import * as React from 'react';
-import { View, StyleSheet } from 'react-native';
-import {Button} from 'react-native-elements';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { Text, View } from 'react-native'
+import { Button } from 'react-native-elements';
 
-export interface AppProps {
-    navigation: any; 
-}
-
-export interface AppState { }
-
-export default class HomeScreen extends React.Component<AppProps, AppState> {
-  constructor(props: AppProps) {
-    super(props);
-    this.state = { };
-  }
-
-  public render() {
-    return (
-      <View style={styles.container}>
-        <Button title="Teste"></Button>
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex:1,
-    padding: 10,
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'stretch',
-    marginTop: 100,
+const useStyles = makeStyles({
+  root: {
+    width: 500,
   },
 });
+
+export default function SimpleBottomNavigation() {
+  const classes = useStyles();
+  const [value, setValue] = React.useState(0);
+
+  return (
+    <View>
+
+    </View>
+
+  );
+}
