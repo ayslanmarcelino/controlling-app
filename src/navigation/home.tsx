@@ -1,4 +1,5 @@
 import HomeScreen from '../view/home';
+import SettingsScreen from '../view/settings';
 import NoPage from '../view/no_page';
 import { Icon } from 'react-native-elements';
 import React from 'react'
@@ -9,5 +10,5 @@ export const homeNavigator = createBottomTabNavigator({
   undefined: {screen: NoPage, navigationOptions: {tabBarIcon: <Icon name="any"></Icon>}},
   undefined_2: {screen: NoPage, navigationOptions: {tabBarIcon: <Icon name="any"></Icon>}},
   undefined_3: {screen: NoPage, navigationOptions: {tabBarIcon: <Icon name="any"></Icon>}},
-  Configurações: {screen: NoPage, navigationOptions: {tabBarIcon: <Icon name="settings"></Icon>}}
+  Configurações: {screen: SettingsScreen, navigationOptions: {tabBarIcon: <Icon name="settings"></Icon>}}
 })
