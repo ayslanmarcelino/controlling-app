@@ -1,4 +1,6 @@
 import HomeScreen from '../view/home';
+import SettingsScreen from '../view/settings';
+import ChartScreen from '../view/chart';
 import NoPage from '../view/no_page';
 import { Icon } from 'react-native-elements';
 import React from 'react'
@@ -8,6 +10,6 @@ export const homeNavigator = createBottomTabNavigator({
   Home: {screen: HomeScreen, navigationOptions: {tabBarIcon: <Icon name="home"></Icon>}}, 
   undefined: {screen: NoPage, navigationOptions: {tabBarIcon: <Icon name="any"></Icon>}},
   undefined_2: {screen: NoPage, navigationOptions: {tabBarIcon: <Icon name="any"></Icon>}},
-  undefined_3: {screen: NoPage, navigationOptions: {tabBarIcon: <Icon name="any"></Icon>}},
-  Configurações: {screen: NoPage, navigationOptions: {tabBarIcon: <Icon name="settings"></Icon>}}
+  Gráficos: {screen: ChartScreen, navigationOptions: {tabBarIcon: <Icon name="show_chart"></Icon>}},
+  Configurações: {screen: SettingsScreen, navigationOptions: {tabBarIcon: <Icon name="settings"></Icon>}}
 })
