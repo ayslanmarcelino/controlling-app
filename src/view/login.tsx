@@ -34,8 +34,8 @@ export default class LoginScreen extends React.Component<AppProps, AppState> {
         <Input placeholder=' Digite seu usuário' leftIcon={{name:'person', color:'gray'}} inputContainerStyle={styles.containerInput} onChangeText={user => this.setState({user})}/>
         <Input placeholder=' Digite sua senha' leftIcon={{name:'lock', color:'gray'}} inputContainerStyle={styles.containerInput} onChangeText={password => this.setState({password})} secureTextEntry={true}/>
         <Button title="Entrar" onPress={() => this.login()} buttonStyle={styles.buttonEnter}/>
-        <Button title="Esqueci minha senha" type="clear" onPress={() => this.login()} buttonStyle={styles.forgotUserOrPassword}/>
-        <Button title="Não possui conta? Cadastre-se" type="clear" onPress={() => this.login()} buttonStyle={styles.forgotUserOrPassword}/>
+        <Button title="Esqueci minha senha" type="clear" buttonStyle={styles.forgotUserOrPassword}/>
+        <Button title="Não possui conta? Cadastre-se" type="clear" buttonStyle={styles.forgotUserOrPassword}/>
       </View>
     </ImageBackground>
     )
