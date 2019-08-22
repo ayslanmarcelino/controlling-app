@@ -10,7 +10,7 @@ export interface AppState{
   password:string;
 }
 
-export default class LoginScreen extends React.Component<AppProps, AppState> {
+export default class LoginScreen extends React.Component<any, AppState> {
 
   constructor(props: AppProps){
     super(props);
@@ -21,8 +21,8 @@ export default class LoginScreen extends React.Component<AppProps, AppState> {
   }
 
   public login(){
-    if(this.state.user == '1' && this.state.password == '')
-      this.props.navigation.navigate('home', {email: this.state.email});
+    if(this.state.user == '' && this.state.password == '')
+      this.props.navigation.navigate('home', {email: this.state.user});
     else 
       console.log ('Email e/ou senha incorreto(s)');
   }

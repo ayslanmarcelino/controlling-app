@@ -10,6 +10,6 @@ export const homeNavigator = createBottomTabNavigator({
   Home: {screen: HomeScreen, navigationOptions: {tabBarIcon: <Icon name="home"></Icon>}}, 
   undefined: {screen: NoPage, navigationOptions: {tabBarIcon: <Icon name="any"></Icon>}},
   undefined_2: {screen: NoPage, navigationOptions: {tabBarIcon: <Icon name="any"></Icon>}},
-  Gráficos: {screen: ChartScreen, navigationOptions: {tabBarIcon: <Icon name="show_chart"></Icon>}},
+  Gráficos: {screen: ChartScreen, navigationOptions: {tabBarIcon: <Icon name="show-chart"></Icon>}},
   Configurações: {screen: SettingsScreen, navigationOptions: {tabBarIcon: <Icon name="settings"></Icon>}}
 })

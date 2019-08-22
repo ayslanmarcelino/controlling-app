@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet, Dimensions } from 'react-native'
-import { Card, Icon, Button } from 'react-native-elements';
+import { Card, Button } from 'react-native-elements';
 
 export default function SimpleBottomNavigation() {
 
@@ -12,7 +12,6 @@ export default function SimpleBottomNavigation() {
           A nossa ideia é organizar o seu financeiro.
         </Text>
         <Button
-          backgroundColor='#03A9F4'
           buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
           title='Conheça-nos' />
       </Card>
