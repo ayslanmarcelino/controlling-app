@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native'
-import { ListItem, Divider } from 'react-native-elements';
+import { ListItem } from 'react-native-elements';
 
 
 const listItems = [
@@ -10,7 +10,7 @@ const listItems = [
   },
   {
     title: 'Contas',
-    icon: 'account_balance_wallet'
+    icon: 'account-balance-wallet'
   },
   {
     title: 'Cartões',
@@ -18,11 +18,11 @@ const listItems = [
   },
   {
     title: 'Categorias',
-    icon: 'category'
+    icon: 'toc'
   },
   {
     title: 'Geral',
-    icon: 'settings_input_component'
+    icon: 'settings-input-component'
   },
   {
     title: 'Compartilhar',
@@ -34,7 +34,7 @@ const listItems = [
   },
   {
     title: 'Sair',
-    icon: 'log-out'
+    icon: 'exit-to-app'
   },
 ]
 
@@ -48,7 +48,6 @@ export default function SimpleBottomNavigation() {
             key={i}
             title={item.title}
             leftIcon={{ name: item.icon }}
-            style={styles.view}
           />
         ))
       }
