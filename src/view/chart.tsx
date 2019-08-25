@@ -1,19 +1,20 @@
 import React from 'react';
-import { Text, View, StyleSheet, Dimensions } from 'react-native'
-import { LineChart, PieChart } from 'react-native-chart-kit'
+import { Text, View, StyleSheet, Dimensions } from 'react-native';
+import { LineChart, PieChart } from 'react-native-chart-kit';
+import i18n from '../i18n';
 
 export default function SimpleBottomNavigation() {
 
   const data = [
-      { name: 'Alimentação', expense: 215, color: 'yellow', legendFontColor: '#7F7F7F', legendFontSize: 15 },
-      { name: 'Lazer', expense: 280, color: 'orange', legendFontColor: '#7F7F7F', legendFontSize: 15 },
-      { name: 'Trabalho', expense: 527, color: 'red', legendFontColor: '#7F7F7F', legendFontSize: 15 },
-      { name: 'Viagem', expense: 853, color: 'blue', legendFontColor: '#7F7F7F', legendFontSize: 15 },
+      { name: i18n.t('charts.data.food'), expense: 215, color: 'yellow', legendFontColor: '#7F7F7F', legendFontSize: 15 },
+      { name: i18n.t('charts.data.recreation'), expense: 280, color: 'orange', legendFontColor: '#7F7F7F', legendFontSize: 15 },
+      { name: i18n.t('charts.data.work'), expense: 527, color: 'red', legendFontColor: '#7F7F7F', legendFontSize: 15 },
+      { name: i18n.t('charts.data.trip'), expense: 853, color: 'blue', legendFontColor: '#7F7F7F', legendFontSize: 15 },
     ]
   return (
     <View style={styles.view}>
     <Text>
-      Gastos por mês
+      {i18n.t('charts.spend_per_month')}
     </Text>
     <LineChart
       data={{
@@ -55,7 +56,7 @@ export default function SimpleBottomNavigation() {
       }}
     />
     <Text>
-      Gastos por categoria
+      {i18n.t('charts.spend_by_category')}
     </Text>
     <PieChart
       data={data}
@@ -65,7 +66,7 @@ export default function SimpleBottomNavigation() {
         backgroundColor: '#e26a00',
         backgroundGradientFrom: '#fb8c00',
         backgroundGradientTo: '#ffa726',
-        decimalPlaces: 2, // optional, defaults to 2dp
+        decimalPlaces: 2,
         color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
         style: {
           borderRadius: 16

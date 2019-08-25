@@ -1,39 +1,40 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native'
+import { View, StyleSheet } from 'react-native';
 import { ListItem } from 'react-native-elements';
+import i18n from '../i18n';
 
 
 const listItems = [
   {
-    title: 'Meu perfil',
+    title: i18n.t('settings.profile'),
     icon: 'account-circle'
   },
   {
-    title: 'Contas',
+    title: i18n.t('settings.accounts'),
     icon: 'account-balance-wallet'
   },
   {
-    title: 'Cartões',
+    title: i18n.t('settings.cards'),
     icon: 'credit-card'
   },
   {
-    title: 'Categorias',
+    title: i18n.t('settings.categories'),
     icon: 'toc'
   },
   {
-    title: 'Geral',
+    title: i18n.t('settings.general'),
     icon: 'settings-input-component'
   },
   {
-    title: 'Compartilhar',
+    title: i18n.t('settings.share'),
     icon: 'share'
   },
   {
-    title: 'Ajuda',
+    title: i18n.t('settings.help'),
     icon: 'help'
   },
   {
-    title: 'Sair',
+    title: i18n.t('settings.quit'),
     icon: 'exit-to-app'
   },
 ]
