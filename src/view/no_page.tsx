@@ -1,11 +1,14 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, View, StyleSheet } from 'react-native';
+import i18n from '../i18n';
 
 export default function SimpleBottomNavigation() {
 
   return (
     <View style={styles.view}>
-      <Text>Botão sem página definida</Text>
+      <Text>
+        {i18n.t('no_page.undefined_page')}
+      </Text>
     </View>
   );
 }
