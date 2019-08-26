@@ -1,0 +1,44 @@
+{
+  "appName": "Controlling",
+  "navigation": {
+    "home": "Home",
+    "charts": "Charts",
+    "settings": "Settings",
+    "undefined": "Undefined"
+  },
+  "login": {
+    "enter_user": "Enter your user",
+    "enter_password": "Enter your password",
+    "enter": "Enter",
+    "forgot_password": "Forgot my password",
+    "not_user": "Don't have an account? Register now"
+  },
+  "home": {
+    "welcome": "Welcome to %{appName}!",
+    "slogan": "Our idea is to organize your financial.",
+    "meet_us": "Meet us"
+  },
+  "no_page":{
+    "undefined_page": "Button without page set"
+  },
+  "charts": {
+    "spend_per_month": "Spend per Month",
+    "spend_by_category": "Spend by Category",
+    "data": {
+      "food": "Food",
+      "recreation": "Recreation",
+      "work": "Work",
+      "trip": "Trip"
+    }
+  },
+  "settings": {
+    "profile": "My profile",
+    "accounts": "ACcounts",
+    "cards": "Cards",
+    "categories": "Categories",
+    "general": "General",
+    "share": "Share",
+    "help": "Help",
+    "quit": "Logout"
+  }
+}

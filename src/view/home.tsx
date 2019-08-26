@@ -1,20 +1,20 @@
 import React from 'react';
-import { Text, View, StyleSheet, Dimensions } from 'react-native'
-import { Card, Icon, Button } from 'react-native-elements';
+import { Text, View, StyleSheet, Dimensions } from 'react-native';
+import { Card, Button } from 'react-native-elements';
+import i18n from '../i18n';
 
 export default function SimpleBottomNavigation() {
 
   return (
     <View style={styles.view}>
       <Card
-        title='Bem-vindo(a) ao Controller!'>
+        title={i18n.t('home.welcome', { appName: i18n.t('appName')})}>
         <Text style={{marginBottom: 10}}>
-          A nossa ideia é organizar o seu financeiro.
+          {i18n.t('home.slogan')}
         </Text>
         <Button
-          backgroundColor='#03A9F4'
           buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-          title='Conheça-nos' />
+          title={i18n.t('home.meet_us')} />
       </Card>
     </View>
   );
