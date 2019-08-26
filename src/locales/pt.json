@@ -1,0 +1,44 @@
+{
+  "appName": "Controlling",
+  "navigation": {
+    "home": "Início",
+    "charts": "Gráficos",
+    "settings": "Configurações",
+    "undefined": "Indefinido"
+  },
+  "login": {
+    "enter_user": "Digite seu usuário",
+    "enter_password": "Digite sua senha",
+    "enter": "Entrar",
+    "forgot_password": "Esqueci minha senha",
+    "not_user": "Não possui conta? Cadastre-se"
+  },
+  "home": {
+    "welcome": "Bem-vindo ao %{appName}!",
+    "slogan": "A nossa ideia é organizar o seu financeiro.",
+    "meet_us": "Conheça-nos"
+  },
+  "no_page":{
+    "undefined_page": "Botão sem página definida"
+  },
+  "charts": {
+    "spend_per_month": "Gastos por mês",
+    "spend_by_category": "Gastos por categoria",
+    "data": {
+      "food": "Alimentação",
+      "recreation": "Lazer",
+      "work": "Trabalho",
+      "trip": "Viagem"
+    }
+  },
+  "settings": {
+    "profile": "Meu perfil",
+    "accounts": "Contas",
+    "cards": "Cartões",
+    "categories": "Categorias",
+    "general": "Geral",
+    "share": "Compartilhar",
+    "help": "Ajuda",
+    "quit": "Sair"
+  }
+}
