@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "packagerPort": 19003,
-  "packagerPid": 25200,
-  "expoServerNgrokUrl": "https://h9-f3z.ayslanmarcelino.controlling-app.exp.direct",
-  "packagerNgrokUrl": "https://packager.h9-f3z.ayslanmarcelino.controlling-app.exp.direct",
-  "ngrokPid": 25211,
+  "packagerPort": 19001,
+  "packagerPid": 31515,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
   "webpackServerPort": null
 }
