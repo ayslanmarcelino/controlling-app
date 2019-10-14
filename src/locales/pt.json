@@ -3,6 +3,7 @@
   "navigation": {
     "home": "Início",
     "charts": "Gráficos",
+    "movement": "Movimentação",
     "settings": "Configurações",
     "undefined": "Indefinido"
   },
@@ -20,6 +21,12 @@
   },
   "no_page":{
     "undefined_page": "Botão sem página definida"
+  },
+  "movement":{
+    "select_option": "Selecione uma opção",
+    "expense": "Despesa",
+    "recipe": "Receita",
+    "transfer": "Transferência"
   },
   "charts": {
     "spend_per_month": "Gastos por mês",
