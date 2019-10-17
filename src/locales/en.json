@@ -3,6 +3,7 @@
   "navigation": {
     "home": "Home",
     "charts": "Charts",
+    "movement": "Movement",
     "settings": "Settings",
     "undefined": "Undefined"
   },
@@ -20,6 +21,14 @@
   },
   "no_page":{
     "undefined_page": "Button without page set"
+  },
+  "movement":{
+    "select_option": "Select an option",
+    "expense": "Expense",
+    "recipe": "Recipe",
+    "transfer": "Transfer",
+    "value": "Valor",
+    "save": "Save"
   },
   "charts": {
     "spend_per_month": "Spend per Month",
