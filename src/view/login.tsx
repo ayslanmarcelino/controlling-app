@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet, ImageBackground, Text, ToastAndroid, Platform, Alert } from 'react-native';
+import { View, StyleSheet, ImageBackground, ToastAndroid, Platform, Alert } from 'react-native';
 import {Input, Button} from 'react-native-elements';
 import i18n from '../i18n';
 
@@ -26,22 +26,44 @@ export default class LoginScreen extends React.Component<any, AppState> {
       this.props.navigation.navigate('home', {email: this.state.user});
     else 
     if (Platform.OS == 'android')
-      ToastAndroid.show('Email e/ou senha incorreto(s)', 3000)
+      ToastAndroid.show(i18n.t('login.user_or_email_incorrect'), 3000)
     else
-      Alert.alert('Tente novamente', 'Email e/ou senha incorreto(s)');
+      Alert.alert(i18n.t('general.try_again'), i18n.t('login.user_or_email_incorrect'));
   }
 
   public render(){
     return (
-    <ImageBackground source={require('./../../assets/img/background.png')} style={styles.background}>
-      <View style={styles.container}>
-        <Input placeholder={i18n.t('login.enter_user')} leftIcon={{name:'person', color:'gray'}} inputContainerStyle={styles.containerInput} onChangeText={user => this.setState({user})}/>
-        <Input placeholder={i18n.t('login.enter_password')} leftIcon={{name:'lock', color:'gray'}} inputContainerStyle={styles.containerInput} onChangeText={password => this.setState({password})} secureTextEntry={true}/>
-        <Button title={i18n.t('login.enter')} onPress={() => this.login()} buttonStyle={styles.buttonEnter}/>
-        <Button title={i18n.t('login.forgot_password')} type="clear" buttonStyle={styles.forgotUserOrPassword}/>
-        <Button title={i18n.t('login.not_user')} type="clear" buttonStyle={styles.forgotUserOrPassword}/>
-      </View>
-    </ImageBackground>
+      <ImageBackground source={require('./../../assets/img/background.png')} style={styles.background}>
+        <View style={styles.container}>
+          <Input 
+            placeholder={i18n.t('login.enter_user')} 
+            leftIcon={{name:'person', color:'gray'}} 
+            inputContainerStyle={styles.containerInput} 
+            onChangeText={user => this.setState({user})}
+          />
+          <Input 
+            placeholder={i18n.t('login.enter_password')} 
+            leftIcon={{name:'lock', color:'gray'}} inputContainerStyle={styles.containerInput} 
+            onChangeText={password => this.setState({password})} 
+            secureTextEntry={true}
+          />
+          <Button 
+            title={i18n.t('login.enter')} 
+            onPress={() => this.login()} 
+            buttonStyle={styles.buttonEnter}
+          />
+          <Button 
+            title={i18n.t('login.forgot_password')} 
+            type="clear" 
+            buttonStyle={styles.forgotUserOrPassword}
+          />
+          <Button 
+            title={i18n.t('login.not_user')} 
+            type="clear" 
+            buttonStyle={styles.forgotUserOrPassword}
+          />
+        </View>
+      </ImageBackground>
     )
   }
 }
@@ -57,14 +79,14 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'stretch',
-    marginTop: 100,
+    marginTop: 100
   },
   containerInput: {
     backgroundColor: '#FFFFFF',
     borderRadius: 30,
     padding: 5,
     marginBottom: 5,
-    marginTop: 10,
+    marginTop: 10
   },
   register: {
     color: 'white',
