@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet, ImageBackground, Text } from 'react-native';
+import { View, StyleSheet, ImageBackground, Text, ToastAndroid, Platform, Alert } from 'react-native';
 import {Input, Button} from 'react-native-elements';
 import i18n from '../i18n';
 
@@ -25,7 +25,10 @@ export default class LoginScreen extends React.Component<any, AppState> {
     if(this.state.user == '' && this.state.password == '')
       this.props.navigation.navigate('home', {email: this.state.user});
     else 
-      console.log ('Email e/ou senha incorreto(s)');
+    if (Platform.OS == 'android')
+      ToastAndroid.show('Email e/ou senha incorreto(s)', 3000)
+    else
+      Alert.alert('Tente novamente', 'Email e/ou senha incorreto(s)');
   }
 
   public render(){
