@@ -26,7 +26,9 @@
     "select_option": "Select an option",
     "expense": "Expense",
     "recipe": "Recipe",
-    "transfer": "Transfer"
+    "transfer": "Transfer",
+    "value": "Valor",
+    "save": "Save"
   },
   "charts": {
     "spend_per_month": "Spend per Month",
