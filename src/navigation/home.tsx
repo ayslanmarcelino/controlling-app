@@ -12,10 +12,6 @@ export const homeNavigator = createBottomTabNavigator({
   Home:       { screen: HomeScreen, 
                 navigationOptions: {tabBarIcon: <Icon name="home"></Icon>, 
                 tabBarLabel: i18n.t('navigation.home')}
-              }, 
-  undefined:  { screen: NoPage, 
-                navigationOptions: {tabBarIcon: <Icon name="add"></Icon>, 
-                tabBarLabel: i18n.t('navigation.undefined')}
               },
   Movement:   { screen: MovementScreen, 
                 navigationOptions: {tabBarIcon: <Icon name="add"></Icon>, 
