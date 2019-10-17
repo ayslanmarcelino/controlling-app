@@ -1,5 +1,8 @@
 {
-  "appName": "Controlling",
+  "general": {
+    "appName": "Controlling",
+    "try_again": "Try again"
+  },
   "navigation": {
     "home": "Home",
     "charts": "Charts",
@@ -12,7 +15,8 @@
     "enter_password": "Enter your password",
     "enter": "Enter",
     "forgot_password": "Forgot my password",
-    "not_user": "Don't have an account? Register now"
+    "not_user": "Don't have an account? Register now",
+    "user_or_email_incorrect": "Incorrect e-mail and/or password"
   },
   "home": {
     "welcome": "Welcome to %{appName}!",

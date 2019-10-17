@@ -1,5 +1,8 @@
 {
-  "appName": "Controlling",
+  "general": {
+    "appName": "Controlling",
+    "try_again": "Tente novamente"
+  },
   "navigation": {
     "home": "Início",
     "charts": "Gráficos",
@@ -12,7 +15,8 @@
     "enter_password": "Digite sua senha",
     "enter": "Entrar",
     "forgot_password": "Esqueci minha senha",
-    "not_user": "Não possui conta? Cadastre-se"
+    "not_user": "Não possui conta? Cadastre-se",
+    "user_or_email_incorrect": "E-mail e/ou senha incorreto(s)"
   },
   "home": {
     "welcome": "Bem-vindo ao %{appName}!",
