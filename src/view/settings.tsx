@@ -3,7 +3,6 @@ import { View, StyleSheet } from 'react-native';
 import { ListItem } from 'react-native-elements';
 import i18n from '../i18n';
 
-
 const listItems = [
   {
     title: i18n.t('settings.profile'),
