@@ -2,6 +2,8 @@ import * as React from 'react';
 import { View, StyleSheet, ImageBackground, ToastAndroid, Platform, Alert } from 'react-native';
 import {Input, Button} from 'react-native-elements';
 import i18n from '../i18n';
+import * as firebase from 'firebase';
+import 'firebase/firestore'
 
 export interface AppProps{
 }
@@ -22,13 +24,16 @@ export default class LoginScreen extends React.Component<any, AppState> {
   }
 
   public login(){
-    if(this.state.user == '' && this.state.password == '')
-      this.props.navigation.navigate('home', {email: this.state.user});
-    else 
-    if (Platform.OS == 'android')
-      ToastAndroid.show(i18n.t('login.user_or_email_incorrect'), 3000)
-    else
-      Alert.alert(i18n.t('general.try_again'), i18n.t('login.user_or_email_incorrect'));
+    firebase.auth().signInWithEmailAndPassword(this.state.user,this.state.password)
+      .then(() => {
+        this.props.navigation.navigate('home', {user: this.state.user});
+      })
+      .catch((erro) => {
+      if (Platform.OS == 'android')
+        ToastAndroid.show(i18n.t('login.user_or_email_incorrect'), 3000)
+      else
+        Alert.alert(i18n.t('general.try_again'), i18n.t('login.user_or_email_incorrect'));
+    })
   }
 
   public render(){
@@ -39,12 +44,12 @@ export default class LoginScreen extends React.Component<any, AppState> {
             placeholder={i18n.t('login.enter_user')} 
             leftIcon={{name:'person', color:'gray'}} 
             inputContainerStyle={styles.containerInput} 
-            onChangeText={user => this.setState({user})}
+            onChangeText={(user) => this.setState({user})}
           />
           <Input 
             placeholder={i18n.t('login.enter_password')} 
             leftIcon={{name:'lock', color:'gray'}} inputContainerStyle={styles.containerInput} 
-            onChangeText={password => this.setState({password})} 
+            onChangeText={(password) => this.setState({password})} 
             secureTextEntry={true}
           />
           <Button 
