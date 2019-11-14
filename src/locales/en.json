@@ -11,7 +11,8 @@
     "confirm_password": "Re-enter your password",
     "register": "Register",
     "success": "Successful registration",
-    "fail": "Unfulfilled Registration"
+    "fail": "Unfulfilled Registration",
+    "cancel": "Cancel"
   },
   "navigation": {
     "home": "Home",

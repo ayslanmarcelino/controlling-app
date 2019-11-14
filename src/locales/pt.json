@@ -11,7 +11,8 @@
     "confirm_password": "Digite novamente sua senha",
     "register": "Cadastrar",
     "success": "Cadastro realizado com sucesso",
-    "fail": "Cadastro não realizado"
+    "fail": "Cadastro não realizado",
+    "cancel": "Cancelar"
   },
   "navigation": {
     "home": "Início",
