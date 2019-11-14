@@ -1,7 +1,18 @@
 {
   "appName": "Controlling",
   "general": {
-    "try_again": "Tente novamente"
+    "try_again": "Tente novamente",
+    "success": "Sucesso"
+  },
+  "register": {
+    "new_user": "Cadastrar novo usuário",
+    "enter_user": "Digite seu usuário",
+    "enter_password": "Digite sua senha",
+    "confirm_password": "Digite novamente sua senha",
+    "register": "Cadastrar",
+    "success": "Cadastro realizado com sucesso",
+    "fail": "Cadastro não realizado",
+    "cancel": "Cancelar"
   },
   "navigation": {
     "home": "Início",
