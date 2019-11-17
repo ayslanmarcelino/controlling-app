@@ -86,6 +86,11 @@ const styles = StyleSheet.create({
   view: {
     flex: 1, 
     justifyContent: 'center', 
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: '#f0f0f0'
+  },
+  view2: {
+    flex: 0.1,
+    backgroundColor: 'red'
   }
 });
