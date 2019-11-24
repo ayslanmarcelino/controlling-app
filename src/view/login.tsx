@@ -5,6 +5,12 @@ import i18n from '../i18n';
 import * as firebase from 'firebase';
 import 'firebase/firestore';
 import Modal from "react-native-modal";
+import { 
+  AdMobBanner,
+  AdMobInterstitial,
+  AdMobRewarded
+} from 'expo-ads-admob';
+
 
 export interface AppProps{
 }
@@ -103,6 +109,32 @@ export default class LoginScreen extends React.Component<any, AppState> {
             type="clear" 
             buttonStyle={styles.forgotUserOrPassword}
             onPress={this.toggleModal}
+          />
+          <Button title="Exibir Propaganda"
+            type="outline"
+            style={style = { paddingTop: 100 }}
+            onPress={ async () => {
+              //ID da propanda
+              AdMobInterstitial.setAdUnitID('ca-app-pub-8890411738087560/6783588590'); 
+              AdMobInterstitial.setTestDeviceID('EMULATOR')
+              await AdMobInterstitial.requestAdAsync();
+              await AdMobInterstitial.showAdAsync();
+            }}
+          />
+          <Button title="Exibir Propaganda com Duração"
+            style={style = { paddingTop: 10 }}
+            onPress={ async () => {
+              AdMobRewarded.setAdUnitID('ca-app-pub-8890411738087560/2473287427'); 
+              AdMobRewarded.setTestDeviceID('EMULATOR')
+              await AdMobRewarded.requestAdAsync();
+              await AdMobRewarded.showAdAsync();
+            }}
+          />
+          <AdMobBanner
+            style={style = { paddingTop: 10 }}
+            bannerSize="smartBannerPortrait"
+            testDeviceID="EMULATOR"
+            adUnitID="ca-app-pub-8890411738087560/1818681309"
           />
           <Modal isVisible={this.state.isModalVisible}>
             <View style={ styles.modal }>
