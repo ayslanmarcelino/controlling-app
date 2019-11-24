@@ -28,7 +28,8 @@
     },
     "android": {
       "package": "br.com.ayslan",
-      "versionCode": 1
+      "versionCode": 1,
+      "googleServicesFile": "./google-services.json"
     }
   }
 }
