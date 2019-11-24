@@ -44,7 +44,7 @@ export default function SimpleBottomNavigation() {
     <View style={styles.view}>
       {
         listItems.map((item, i) => (
-          <ListItem
+          <ListItem style={styles.listView}
             key={i}
             title={item.title}
             leftIcon={{ name: item.icon }}
@@ -52,12 +52,18 @@ export default function SimpleBottomNavigation() {
         ))
       }
     </View>
-    
   );
 }
 
 const styles = StyleSheet.create({
   view: {
-    paddingTop: 25
+    flex:1,
+    justifyContent: 'center',
+    backgroundColor: '#f0f0f0',
+
+  },
+  listView: {
+    maxWidth: '90%',
+    left: '5%'
   }
 });

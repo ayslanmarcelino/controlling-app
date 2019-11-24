@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "67392454863",
+    "firebase_url": "https://controlling-app-669d5.firebaseio.com",
+    "project_id": "controlling-app-669d5",
+    "storage_bucket": "controlling-app-669d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:67392454863:android:8914d4da61903e4c3237ba",
+        "android_client_info": {
+          "package_name": "br.com.ayslan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "67392454863-pvqf2vii8tn10simj2c58g2ijv69ajg3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC8iRMPz5BGnViojIWazivcbE6s8PhLc8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "67392454863-pvqf2vii8tn10simj2c58g2ijv69ajg3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
